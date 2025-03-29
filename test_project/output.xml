@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-29T01:43:51.970659" rpa="false" schemaversion="5">
+<suite id="s1" name="Logout" source="C:\Users\Suleimenov\Desktop\kbtu\spring24-25\mtsd\test_project\tests\logout.robot">
+<test id="s1-t1" name="Log Out Test" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-29T01:43:52.183340" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-29T01:43:52.183103" elapsed="2.800305"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-03-29T01:43:54.984009" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Suleimenov\Desktop\kbtu\spring24-25\mtsd\test_project\user.txt"&gt;C:\Users\Suleimenov\Desktop\kbtu\spring24-25\mtsd\test_project\user.txt&lt;/a&gt;'.</msg>
+<msg time="2025-03-29T01:43:54.984287" level="INFO">${USERNAME} = userelZpw</msg>
+<var>${USERNAME}</var>
+<arg>${FILENAME}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-03-29T01:43:54.983801" elapsed="0.000516"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-29T01:43:54.984816" level="INFO">Clicking element 'id=login2'.</msg>
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T01:43:54.984526" elapsed="0.051435"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-29T01:43:55.036305" elapsed="0.226673"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-29T01:43:55.263696" level="INFO">Typing text 'userelZpw' into text field 'id=loginusername'.</msg>
+<arg>id=loginusername</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T01:43:55.263324" elapsed="0.065216"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-29T01:43:55.329263" level="INFO">Typing text 'newpass123' into text field 'id=loginpassword'.</msg>
+<arg>id=loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T01:43:55.328959" elapsed="0.061657"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-29T01:43:55.391150" level="INFO">Clicking button 'xpath=//button[text()='Log in']'.</msg>
+<arg>xpath=//button[text()='Log in']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T01:43:55.390940" elapsed="0.063139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=logout2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-29T01:43:55.454407" elapsed="2.107771"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-29T01:43:57.562741" level="INFO">"Успешный вход: userelZpw"</msg>
+<arg>"Успешный вход: ${USERNAME}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-29T01:43:57.562503" elapsed="0.000301"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-29T01:43:57.563293" level="INFO">Clicking element 'id=logout2'.</msg>
+<arg>id=logout2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T01:43:57.563114" elapsed="0.371495"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-29T01:43:57.935063" elapsed="0.012380"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-29T01:43:57.947901" level="INFO">"Выход выполнен успешно"</msg>
+<arg>"Выход выполнен успешно"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-29T01:43:57.947770" elapsed="0.000174"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-29T01:43:57.948087" elapsed="2.121751"/>
+</kw>
+<status status="PASS" start="2025-03-29T01:43:52.182242" elapsed="7.888198"/>
+</test>
+<status status="PASS" start="2025-03-29T01:43:51.972108" elapsed="8.099347"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Logout" id="s1" pass="1" fail="0" skip="0">Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
