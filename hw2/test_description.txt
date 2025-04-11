@@ -1,0 +1,19 @@
+Test Case Descriptions:
+
+1. Successful Login Test
+   - Purpose: Verify that a user can successfully log in with valid credentials
+   - Steps:
+     1. Navigate to the login page
+     2. Enter valid username (standard_user)
+     3. Enter valid password (secret_sauce)
+     4. Click login button
+   - Expected Result: User is redirected to the products page
+
+2. Failed Login Test
+   - Purpose: Verify that login fails with invalid credentials
+   - Steps:
+     1. Navigate to the login page
+     2. Enter invalid username (locked_out_user)
+     3. Enter valid password (secret_sauce)
+     4. Click login button
+   - Expected Result: Error message is displayed indicating the user is locked out

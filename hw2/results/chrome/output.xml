@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-11T23:56:39.250977" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="C:\Users\Suleimenov\Desktop\kbtu\spring24-25\mtsd\hw2\login_tests.robot">
+<test id="s1-t1" name="Successful Login Test" line="10">
+<kw name="Open Browser To Login Page">
+<kw name="Get Browserstack Url" owner="browserstack_config">
+<msg time="2025-04-11T23:56:39.473773" level="INFO">${remote_url} = https://ayansuleimenov_Thtb7r:nV8MjUidar8LUanFKuym@hub-cloud.browserstack.com/wd/hub</msg>
+<var>${remote_url}</var>
+<status status="PASS" start="2025-04-11T23:56:39.473637" elapsed="0.000173"/>
+</kw>
+<kw name="Get Browser Options" owner="browserstack_config">
+<msg time="2025-04-11T23:56:39.474064" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001A2CDEB1FD0&gt;</msg>
+<var>${options}</var>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-04-11T23:56:39.473920" elapsed="0.000171"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:39.474701" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/' through remote server at 'https://ayansuleimenov_Thtb7r:nV8MjUidar8LUanFKuym@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-04-11T23:56:47.221843" level="INFO">C:\Users\Suleimenov\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\remote_connection.py:418: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+  headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
+<arg>${URL}</arg>
+<arg>browser=${BROWSER.lower()}</arg>
+<arg>remote_url=${remote_url}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-11T23:56:39.474194" elapsed="7.748041"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:47.466237" level="INFO">Page title is 'Swag Labs'.</msg>
+<arg>Swag Labs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-04-11T23:56:47.222484" elapsed="0.243863"/>
+</kw>
+<status status="PASS" start="2025-04-11T23:56:39.473075" elapsed="7.993396"/>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:47.467436" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<arg>user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T23:56:47.467147" elapsed="0.839716"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-04-11T23:56:47.466831" elapsed="0.840166"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:48.307841" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T23:56:48.307653" elapsed="0.771391"/>
+</kw>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-04-11T23:56:48.307350" elapsed="0.771887"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:49.080411" level="INFO">Clicking button 'login-button'.</msg>
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T23:56:49.080177" elapsed="0.837832"/>
+</kw>
+<status status="PASS" start="2025-04-11T23:56:49.079827" elapsed="0.838313"/>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>inventory_container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-11T23:56:49.918788" elapsed="0.806407"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:51.214599" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-11T23:56:50.725603" elapsed="0.489111"/>
+</kw>
+<status status="PASS" start="2025-04-11T23:56:49.918492" elapsed="1.296345"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-11T23:56:51.215291" elapsed="1.757017"/>
+</kw>
+<doc>Test successful login with valid credentials</doc>
+<status status="PASS" start="2025-04-11T23:56:39.472426" elapsed="13.500184"/>
+</test>
+<test id="s1-t2" name="Failed Login Test" line="19">
+<kw name="Open Browser To Login Page">
+<kw name="Get Browserstack Url" owner="browserstack_config">
+<msg time="2025-04-11T23:56:52.974350" level="INFO">${remote_url} = https://ayansuleimenov_Thtb7r:nV8MjUidar8LUanFKuym@hub-cloud.browserstack.com/wd/hub</msg>
+<var>${remote_url}</var>
+<status status="PASS" start="2025-04-11T23:56:52.974233" elapsed="0.000146"/>
+</kw>
+<kw name="Get Browser Options" owner="browserstack_config">
+<msg time="2025-04-11T23:56:52.974629" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001A2CDE47890&gt;</msg>
+<var>${options}</var>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-04-11T23:56:52.974475" elapsed="0.000182"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:52.975311" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/' through remote server at 'https://ayansuleimenov_Thtb7r:nV8MjUidar8LUanFKuym@hub-cloud.browserstack.com/wd/hub'.</msg>
+<arg>${URL}</arg>
+<arg>browser=${BROWSER.lower()}</arg>
+<arg>remote_url=${remote_url}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-11T23:56:52.974770" elapsed="6.511610"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:59.749961" level="INFO">Page title is 'Swag Labs'.</msg>
+<arg>Swag Labs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-04-11T23:56:59.486696" elapsed="0.263437"/>
+</kw>
+<status status="PASS" start="2025-04-11T23:56:52.974010" elapsed="6.776279"/>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:56:59.751339" level="INFO">Typing text 'locked_out_user' into text field 'user-name'.</msg>
+<arg>user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T23:56:59.751095" elapsed="0.854158"/>
+</kw>
+<arg>locked_out_user</arg>
+<status status="PASS" start="2025-04-11T23:56:59.750778" elapsed="0.854603"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:57:00.606254" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T23:57:00.606066" elapsed="0.780806"/>
+</kw>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-04-11T23:57:00.605741" elapsed="0.781351"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:57:01.388123" level="INFO">Clicking button 'login-button'.</msg>
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T23:57:01.387898" elapsed="0.803586"/>
+</kw>
+<status status="PASS" start="2025-04-11T23:57:01.387561" elapsed="0.804108"/>
+</kw>
+<kw name="Error Message Should Be Visible">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@data-test="error"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-11T23:57:02.192473" elapsed="0.510963"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-11T23:57:03.196298" level="INFO">Element '//*[@data-test="error"]' contains text 'Epic sadface: Sorry, this user has been locked out.'.</msg>
+<arg>//*[@data-test="error"]</arg>
+<arg>Epic sadface: Sorry, this user has been locked out.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-11T23:57:02.703642" elapsed="0.492817"/>
+</kw>
+<status status="PASS" start="2025-04-11T23:57:02.192108" elapsed="1.004493"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-11T23:57:03.197153" elapsed="1.731451"/>
+</kw>
+<doc>Test login with invalid credentials</doc>
+<status status="PASS" start="2025-04-11T23:56:52.973534" elapsed="11.955362"/>
+</test>
+<status status="PASS" start="2025-04-11T23:56:39.252257" elapsed="25.677665"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="2" fail="0" skip="0">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
